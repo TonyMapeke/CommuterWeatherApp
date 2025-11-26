@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather for Long Commuters</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>☁️ Weather for Long Commuters</h1>
+            <p>Plan your commute with live weather and route information</p>
+        </header>
+
+        <div class="search-section">
+            <div class="input-group">
+                <label for="origin">Starting Location</label>
+                <input type="text" id="origin" placeholder="e.g., New York, NY" />
+            </div>
+            
+            <div class="input-group">
+                <label for="destination">Destination</label>
+                <input type="text" id="destination" placeholder="e.g., Boston, MA" />
+            </div>
+            
+            <div class="travel-mode-section">
+                <label>Travel Mode</label>
+                <div class="mode-buttons">
+                    <button class="mode-btn active" data-mode="driving" title="Get driving directions with traffic estimates">
+                        <span class="icon">🚗</span>
+                        <span>Driving</span>
+                    </button>
+                    <button class="mode-btn" data-mode="transit" title="Find public transportation routes with schedules">
+                        <span class="icon">🚇</span>
+                        <span>Transit</span>
+                    </button>
+                    <button class="mode-btn" data-mode="walking" title="Walking directions for pedestrians">
+                        <span class="icon">🚶</span>
+                        <span>Walking</span>
+                    </button>
+                    <button class="mode-btn" data-mode="bicycling" title="Bike-friendly routes and paths">
+                        <span class="icon">🚴</span>
+                        <span>Bicycling</span>
+                    </button>
+                </div>
+            </div>
+            
+            <button id="searchBtn" class="search-btn">Find Route and Weather</button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Fetching route and weather data...</p>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+        <div id="results" class="results hidden">
+            <div class="cards-container">
+                <div class="card route-card">
+                    <h2>🚗 Route Information</h2>
+                    <div class="route-info">
+                        <div class="info-item">
+                            <span class="label">From:</span>
+                            <span id="startAddress" class="value"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">To:</span>
+                            <span id="endAddress" class="value"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Distance:</span>
+                            <span id="distance" class="value"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Travel Time:</span>
+                            <span id="duration" class="value highlight"></span>
+                        </div>
+                        <div id="transitDetails" class="transit-details hidden"></div>
+                    </div>
+                </div>
+
+                <div class="card weather-card">
+                    <h2>🌤️ Weather at Destination</h2>
+                    <div class="weather-info">
+                        <div class="weather-main">
+                            <img id="weatherIcon" src="" alt="Weather icon" />
+                            <div class="temp-container">
+                                <span id="temperature" class="temperature"></span>
+                                <span class="unit">°F</span>
+                            </div>
+                        </div>
+                        <div class="weather-description" id="weatherDescription"></div>
+                        <div class="weather-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Feels Like:</span>
+                                <span id="feelsLike" class="detail-value"></span>°F
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Humidity:</span>
+                                <span id="humidity" class="detail-value"></span>%
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Wind Speed:</span>
+                                <span id="windSpeed" class="detail-value"></span> mph
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <h2>📍 Route Map</h2>
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Built with ❤️ for commuters everywhere • Powered by <a href="https://developers.google.com/maps" target="_blank">Google Maps</a> & <a href="https://openweathermap.org/" target="_blank">OpenWeather</a></p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
