@@ -37,6 +37,7 @@ A lightweight Flask app that combines **Google Maps Directions** and **OpenWeath
     ```bash
     python app.py
     ```
+    Then open **http://localhost:5000** in your browser.
 
 ## 📸 Screenshot
 
@@ -51,4 +52,3 @@ A lightweight Flask app that combines **Google Maps Directions** and **OpenWeath
 </p>
    
 
-Then open **http://localhost:5000** in your browser.
