@@ -39,12 +39,6 @@ A lightweight Flask app that combines **Google Maps Directions** and **OpenWeath
     ```
     Then open **http://localhost:5000** in your browser.
 
-## 📸 Screenshot
-
-<p align="center">
-  <img src="assets/demo2.png" width="700" alt="App Screenshot">
-</p>
-
 ## 🎥 Demo
 
 <p align="center">
