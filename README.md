@@ -1,10 +1,10 @@
-# 🌤️ Commuter Weather App
+# Commuter Weather App
 
 A lightweight Flask app that combines **Google Maps Directions** and **OpenWeather** data to give commuters real-time route and weather information in one place.
 
 ---
 
-## 🚀 Features
+## Features
 - Travel time, distance, and route details  
 - Supports **Driving, Transit, Walking, Bicycling**  
 - Live weather at your destination (temperature, feels-like, humidity, wind)  
@@ -12,7 +12,7 @@ A lightweight Flask app that combines **Google Maps Directions** and **OpenWeath
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Flask (Python)**
 - **JavaScript**
 - **Google Maps Directions API**
